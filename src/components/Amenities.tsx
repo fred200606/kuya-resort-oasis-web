@@ -100,30 +100,30 @@ const amenitiesData = [
 
 const Amenities = () => {
   return (
-    <section id="amenities" className="py-20 bg-resort-beige/20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-resort-green mb-4">
+    <section id="amenities" className="py-12 md:py-20 bg-resort-beige/20">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-resort-green mb-3 md:mb-4">
             Resort Amenities
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm md:text-lg text-gray-600 max-w-xs sm:max-w-md md:max-w-2xl mx-auto">
             Indulge in our premium amenities designed for your comfort and enjoyment
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {amenitiesData.map((amenity, index) => (
-            <Card key={index} className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader className="pb-2">
-                <div className="w-12 h-12 bg-resort-green/10 rounded-full flex items-center justify-center mb-4">
-                  <amenity.icon className="text-resort-green" size={24} />
+            <Card key={index} className="bg-white border-none shadow-md hover:shadow-lg transition-shadow">
+              <CardHeader className="pb-2 pt-4 px-4 md:px-6">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-resort-green/10 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                  <amenity.icon className="text-resort-green" size={20} />
                 </div>
-                <CardTitle className="text-xl font-playfair text-resort-green">
+                <CardTitle className="text-lg md:text-xl font-playfair text-resort-green">
                   {amenity.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600">
+              <CardContent className="px-4 md:px-6 pb-4 md:pb-6">
+                <CardDescription className="text-sm md:text-base text-gray-600">
                   {amenity.description}
                 </CardDescription>
               </CardContent>

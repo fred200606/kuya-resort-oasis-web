@@ -46,37 +46,37 @@ const Rooms = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="pt-20 pb-16 bg-resort-beige/10">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-5xl font-playfair font-bold text-resort-green mb-4">
+      <div className="pt-20 pb-12 md:pb-16 bg-resort-beige/10">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-8 md:mb-12">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-resort-green mb-3 md:mb-4">
               Our Accommodations
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-sm md:text-lg text-gray-600 max-w-xs sm:max-w-md lg:max-w-2xl mx-auto">
               Choose from our selection of premium rooms and villas for your perfect getaway
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {roomData.map((room) => (
-              <Card key={room.id} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="h-64 w-full overflow-hidden">
+              <Card key={room.id} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div className="h-48 sm:h-56 md:h-64 w-full overflow-hidden">
                   <img 
                     src={room.image} 
                     alt={room.title} 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-xl font-playfair text-resort-green">{room.title}</CardTitle>
-                  <CardDescription className="text-lg font-semibold text-resort-terracotta">
+                <CardHeader className="pb-2 pt-4 px-4 md:px-6">
+                  <CardTitle className="text-lg md:text-xl font-playfair text-resort-green">{room.title}</CardTitle>
+                  <CardDescription className="text-base md:text-lg font-semibold text-resort-terracotta">
                     {room.price} per night
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{room.description}</p>
+                <CardContent className="px-4 md:px-6 py-2">
+                  <p className="text-sm md:text-base text-gray-600">{room.description}</p>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="px-4 md:px-6 pb-4 pt-2">
                   <Button 
                     onClick={() => handleBookNow(room.id)} 
                     className="w-full bg-resort-terracotta hover:bg-resort-green text-white"
