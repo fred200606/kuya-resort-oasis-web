@@ -1,5 +1,5 @@
 
-import { Wifi, Coffee, Utensils, Swimming, Trees, Waves } from "lucide-react";
+import { Wifi, Coffee, Utensils } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 // Create Swimming icon since it's not in lucide
