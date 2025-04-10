@@ -48,7 +48,7 @@ const Rooms = () => {
       <Navbar />
       <div className="pt-20 pb-12 md:pb-16 bg-resort-beige/10">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-8 md:mb-12 fade-in">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-resort-green mb-3 md:mb-4">
               Our Accommodations
             </h1>
@@ -58,8 +58,8 @@ const Rooms = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {roomData.map((room) => (
-              <Card key={room.id} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            {roomData.map((room, index) => (
+              <Card key={room.id} className={`overflow-hidden shadow-md hover:shadow-xl transition-shadow hover-lift fade-in delay-${(index + 1) * 100}`}>
                 <div className="h-48 sm:h-56 md:h-64 w-full overflow-hidden">
                   <img 
                     src={room.image} 
@@ -79,7 +79,7 @@ const Rooms = () => {
                 <CardFooter className="px-4 md:px-6 pb-4 pt-2">
                   <Button 
                     onClick={() => handleBookNow(room.id)} 
-                    className="w-full bg-resort-terracotta hover:bg-resort-green text-white"
+                    className="w-full bg-resort-terracotta hover:bg-resort-green text-white transition-colors duration-300"
                   >
                     Book This Room
                   </Button>
