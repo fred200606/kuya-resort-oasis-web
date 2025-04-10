@@ -1,7 +1,16 @@
 
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const handleOurStory = () => {
+    // For now, this just navigates to the About page
+    // In a real application, you might have a dedicated "Our Story" page
+    navigate("/about");
+  };
+
   return (
     <section id="about" className="py-20 bg-resort-beige/10">
       <div className="container mx-auto px-4">
@@ -23,7 +32,7 @@ const About = () => {
               Our philosophy is simple: to provide an authentic, luxurious experience that connects our guests with the natural beauty and rich culture of our location, while ensuring unparalleled comfort and service.
             </p>
             
-            <Button className="bg-resort-terracotta hover:bg-resort-green text-white">
+            <Button onClick={handleOurStory} className="bg-resort-terracotta hover:bg-resort-green text-white">
               Our Story
             </Button>
           </div>
